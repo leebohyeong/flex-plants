@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: #2D6A4F;
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    column-gap: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+}
+
+
+#container {
+    
+}
