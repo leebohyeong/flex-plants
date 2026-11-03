@@ -61,7 +61,8 @@ footer {
     /* padding: 10px; */
 }
 
-.menu a:hover {
+.menu a:hover,
+.sns a:hover {
     color: #ffd166;
 }
 
