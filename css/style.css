@@ -19,16 +19,21 @@ button {
     background-color: transparent;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Noto Sans KR", sans-serif;
-  color: #333333;
-  background-color: #f6fbf4;
+    position: relative;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #333333;
+    background-color: #f6fbf4;
 }
 h1,
 h2,
 h3 {
-  font-family: "Do Hyeon", sans-serif;
-  font-weight: normal;
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: normal;
 }
 
 h2 {
@@ -47,6 +52,15 @@ footer {
     color: #fff;
 }
 
+header {
+    opacity: .9;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
 .logo {
     font-size: 28px;
 }
@@ -58,7 +72,6 @@ footer {
 
 .menu a {
     display: block;
-    /* padding: 10px; */
 }
 
 .menu a:hover,
@@ -73,7 +86,6 @@ footer {
     justify-content: center;
     row-gap: 12px;
     height: 280px;
-    margin-top: 32px;
     background-color: #d8f3dc;
 }
 
@@ -123,13 +135,13 @@ main {
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+    position: relative;
     padding: 24px;
     background-color: #fff;
     outline: 1px solid #d8f3dc;
 }
 
-.card:hover,
-.card:nth-child(2) {
+.card:hover {
     outline: 2px solid #2d6a4f;
 }
 
@@ -164,6 +176,26 @@ main {
 
 .price button:hover {
     background-color: #e76f51;
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    z-index: 1;
+    align-content: center;
+    width: 40px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.badge.new {
+    background-color: #2d6a4f;
+}
+
+.badge.hot {
+    background-color: #E76E53;
 }
 
 #care ol {
@@ -284,5 +316,20 @@ footer {
     column-gap: 24px;
 }
 
+.btn-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
 
+.btn-top a {
+    display: block;
+}
+
+.btn-top i {
+    border-radius: 100%;
+    box-shadow: 3px 3px 5px #857b7b;
+    color: #B8B8B8;
+    font-size: 50px;
+}
 
