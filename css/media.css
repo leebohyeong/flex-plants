@@ -1,13 +1,23 @@
 @media screen and (max-width: 767px) {
   header {
-    flex-direction: column;
     padding: 20px;
   }
 
-  nav {
+  .nav {
+    display: none;
     width: 100%;
     margin-top: 20px;
     text-align: center;
+  }
+
+  .nav.active {
+    display: block;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    margin: 0;
+    padding: 20px;
+    background-color: #2d6a4f;
   }
 
   .menu {
@@ -23,6 +33,38 @@
     padding: 5px;
     border-bottom: 1px solid #eee;
   }
+
+  .mobile-btn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px;
+    border: 1px solid #fff;
+  }
+
+  .mobile-btn span {
+    background-color: #fff;
+    width: 24px;
+    height: 3px;
+  }
+
+  .mobile-btn > * {
+    transition: transform .3s ease, opacity .3s ease-in-out;
+  }
+
+  .mobile-btn[aria-expanded='true'] span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .mobile-btn[aria-expanded='true'] span:nth-child(2){
+    opacity: 0;
+  }
+
+  .mobile-btn[aria-expanded='true'] span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
 
   .hero {
     height: 50vh;
